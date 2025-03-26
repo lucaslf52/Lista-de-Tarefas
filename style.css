@@ -43,3 +43,23 @@ main button{
     cursor: pointer;
     margin-left: 5px;
 }
+
+ul li{
+display: flex;
+justify-content: space-between;
+border: 1px solid;
+padding: 4px;
+align-items: center;
+}
+
+ul li .apagar{
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.tarefas{
+    margin-top: 10px;
+}

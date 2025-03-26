@@ -1,8 +1,8 @@
 
-let botao = document.querySelector('button');
+let adicionar = document.querySelector('.adicionar');
 let lista = document.querySelector('.tarefas');
 
-botao.addEventListener('click',()=>{
+adicionar.addEventListener('click',()=>{
     let tarefa = document.querySelector('input');
     if(tarefa.value){
         adicionarTarefa(tarefa.value);
@@ -12,6 +12,17 @@ botao.addEventListener('click',()=>{
     }
 });
 
+document.addEventListener('click', (e)=>{
+if(e.target.classList[0]=='apagar'){
+    apagarTarefa(e.target.parentNode )
+}
+})
+
 function adicionarTarefa(tarefa){
-    lista.innerHTML += `<li>${tarefa}</li>`
+    lista.innerHTML += `<li>${tarefa} <button class="apagar">x</button></li>`;
+}
+
+function apagarTarefa(tarefa){
+    tarefa.remove();
+
 }
